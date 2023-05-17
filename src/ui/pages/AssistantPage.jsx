@@ -1,5 +1,5 @@
 import React from "react";
-import gota from "../../assets/gota.svg";
+import gota from "../../assets/gota.png";
 
 export const AssistantPage = () => {
   return (

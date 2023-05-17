@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { AssistantPage, HomePage } from "../ui/pages/index";
+import { AssistantPage, HomePage, IntroPage } from "../ui/pages";
 export const AppRouter = () => {
   //logica de si es logueado
   return (
@@ -8,6 +8,7 @@ export const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/welcome" element={<AssistantPage />} />
         <Route path="/*" element={<Navigate to={"/"} />} />
+        <Route path="/intro" element={<IntroPage/>} />
       </Routes>
     </>
   );
