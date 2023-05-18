@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { HomePage, IntroPage, AssistantPage } from "../ui/pages";
+
 export const AppRouter = () => {
   //logica de si es logueado
   return (

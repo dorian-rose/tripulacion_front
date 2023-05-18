@@ -38,9 +38,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:7.32.2"],\
             ["eslint-plugin-react-hooks", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:0.3.5"],\
+            ["leaflet", "npm:1.9.3"],\
             ["postcss", "npm:8.4.23"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:18.2.0"],\
+            ["react-leaflet", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.2.1"],\
             ["react-redux", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:8.0.5"],\
             ["react-router-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:6.11.1"],\
             ["redux", "npm:4.2.1"],\
@@ -837,6 +839,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/move-file", "npm:2.0.1"],\
             ["mkdirp", "npm:1.0.4"],\
             ["rimraf", "npm:3.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@react-leaflet/core", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/@react-leaflet-core-npm-2.1.0-de483ca53f-c11a15fb71.zip/node_modules/@react-leaflet/core/",\
+          "packageDependencies": [\
+            ["@react-leaflet/core", "npm:2.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:de76afd04e4e751f0de165abf709199265e7263f03a0201a8f10530ea494e0bcf2a13ad0daa35d65750c80c44830f696807ba1e9629fcdbb63eb65fd870a68a7#npm:2.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@react-leaflet-core-virtual-11a602d153/0/cache/@react-leaflet-core-npm-2.1.0-de483ca53f-c11a15fb71.zip/node_modules/@react-leaflet/core/",\
+          "packageDependencies": [\
+            ["@react-leaflet/core", "virtual:de76afd04e4e751f0de165abf709199265e7263f03a0201a8f10530ea494e0bcf2a13ad0daa35d65750c80c44830f696807ba1e9629fcdbb63eb65fd870a68a7#npm:2.1.0"],\
+            ["@types/leaflet", null],\
+            ["@types/react", "npm:18.2.6"],\
+            ["@types/react-dom", "npm:18.2.4"],\
+            ["leaflet", "npm:1.9.3"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/leaflet",\
+            "@types/react-dom",\
+            "@types/react",\
+            "leaflet",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2898,6 +2930,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["leaflet", [\
+        ["npm:1.9.3", {\
+          "packageLocation": "./.yarn/cache/leaflet-npm-1.9.3-08e9e2d69b-f8bc33215e.zip/node_modules/leaflet/",\
+          "packageDependencies": [\
+            ["leaflet", "npm:1.9.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["levn", [\
         ["npm:0.4.1", {\
           "packageLocation": "./.yarn/cache/levn-npm-0.4.1-d183b2d7bb-12c5021c85.zip/node_modules/levn/",\
@@ -3744,6 +3785,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-leaflet", [\
+        ["npm:4.2.1", {\
+          "packageLocation": "./.yarn/cache/react-leaflet-npm-4.2.1-e2245640e8-79222c2ba0.zip/node_modules/react-leaflet/",\
+          "packageDependencies": [\
+            ["react-leaflet", "npm:4.2.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-leaflet-virtual-de76afd04e/0/cache/react-leaflet-npm-4.2.1-e2245640e8-79222c2ba0.zip/node_modules/react-leaflet/",\
+          "packageDependencies": [\
+            ["react-leaflet", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.2.1"],\
+            ["@react-leaflet/core", "virtual:de76afd04e4e751f0de165abf709199265e7263f03a0201a8f10530ea494e0bcf2a13ad0daa35d65750c80c44830f696807ba1e9629fcdbb63eb65fd870a68a7#npm:2.1.0"],\
+            ["@types/leaflet", null],\
+            ["@types/react", "npm:18.2.6"],\
+            ["@types/react-dom", "npm:18.2.4"],\
+            ["leaflet", "npm:1.9.3"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/leaflet",\
+            "@types/react-dom",\
+            "@types/react",\
+            "leaflet",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-redux", [\
         ["npm:8.0.5", {\
           "packageLocation": "./.yarn/cache/react-redux-npm-8.0.5-9ff31aed95-a108f4f7ea.zip/node_modules/react-redux/",\
@@ -4421,9 +4493,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:7.32.2"],\
             ["eslint-plugin-react-hooks", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:0.3.5"],\
+            ["leaflet", "npm:1.9.3"],\
             ["postcss", "npm:8.4.23"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:18.2.0"],\
+            ["react-leaflet", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:4.2.1"],\
             ["react-redux", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:8.0.5"],\
             ["react-router-dom", "virtual:f2b62ee0a4d78525f11643ec9ab9203988aaf6ccf061064b1b66815b11ca70c6b92f10d2aeaecdef0a47de2791e3210934c0a7fbc6757313098cab5d0b5ceabe#npm:6.11.1"],\
             ["redux", "npm:4.2.1"],\
