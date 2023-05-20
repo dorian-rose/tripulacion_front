@@ -16,7 +16,11 @@ export const MapContainerComp = () => {
   }, []);
 
   return (
-    <MapContainer center={[42.38315517830405, -6.690562337456111]} zoom={9} style={{ height: "500px" }}>
+    <MapContainer
+      center={[42.38315517830405, -6.690562337456111]}
+      zoom={9}
+      style={{ height: "500px" }}
+    >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {markers.map((marker) => (
         <Marker key={marker.id} position={[marker.Lat, marker.Long]}>
@@ -26,7 +30,6 @@ export const MapContainerComp = () => {
             Cuenca: {marker.Cuenca}
             <br />
             Volumen actual: {marker.porcentaje}%
-            
           </Popup>
         </Marker>
       ))}

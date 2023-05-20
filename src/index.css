@@ -14,3 +14,7 @@
 .bottom-4vh {
   bottom: 4vh;
 }
+
+.z-101 {
+  z-index: 1001;
+}
