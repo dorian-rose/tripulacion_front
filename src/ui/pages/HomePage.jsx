@@ -29,19 +29,22 @@ export const HomePage = () => {
   //click on info buttons, infoTopic is changed
   const handleClick = ({ target }) => {
     setInfoTopic(target.id);
-    console.log(infoTopic);
+    //scroll to info section, if section mounted:
+    if (infoTopic != "") {
+      scrollToInfo(info);
+    }
   };
 
   //on change of infoTopic
   useEffect(() => {
-    //scroll to info section
-    scrollToInfo(info);
     // set state that topic has been visited
     console.log(infoTopic);
     if (infoTopic != "") {
       const visitedPages = { ...visitedObject, [infoTopic]: true };
       dispatch(setVisited(visitedPages));
     }
+    //scroll to info section
+    scrollToInfo(info);
   }, [infoTopic]);
   console.log(visitedObject);
 
@@ -51,7 +54,9 @@ export const HomePage = () => {
 
   return (
     <>
-      <div className="bg-backgroundPrimary min-h-screen pb-6">
+      <div
+        className={`bg-backgroundPrimary ${infoTopic == "" && "min-h-screen"} `}
+      >
         <section className="z-101">
           <hgroup className="flex justify-between pt-10">
             <h1>
@@ -70,19 +75,19 @@ export const HomePage = () => {
             Selección de categoría
           </h2>
           <article className="flex flex-wrap justify-start mx-3 md:justify-center">
-            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-semibold">
+            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-medium">
               Políticas azules
             </button>
-            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-semibold">
+            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-medium">
               Buenos usos
             </button>
-            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-semibold">
+            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-medium">
               Sequía
             </button>
-            <button className="my-1 ms-2  py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-semibold">
+            <button className="my-1 ms-2  py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-medium">
               Contaminación
             </button>
-            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-semibold">
+            <button className="my-1 ms-2 py-1 px-3 border border-white bg-small-button/80 hover:bg-secondary  text-center  text-xs rounded-3xl font-medium">
               Mas cosas
             </button>
           </article>
@@ -91,7 +96,7 @@ export const HomePage = () => {
               <button
                 id="droughtVisited"
                 onClick={handleClick}
-                className="mb-4 mt-7 drop-shadow w-11/12 border border-white bg-terciary hover:bg-primary text-darkBlue font-bold block  text-center m-auto py-3 shadow-lg rounded-3xl"
+                className="mb-4 mt-7 drop-shadow w-11/12 border border-white bg-terciary hover:bg-primary text-darkBlue font-semibold block  text-center m-auto py-3 shadow-lg rounded-3xl"
               >
                 {/* <img className="" src={martillo} alt="drought graph"/> */}
                 Legislación sobre el agua
@@ -99,7 +104,7 @@ export const HomePage = () => {
               <button
                 id="contaminationVisited"
                 onClick={handleClick}
-                className="mb-8 drop-shadow w-11/12 border border-terciary bg-terciary hover:bg-primary text-darkBlue font-bold block text-center m-auto py-3 shadow-lg rounded-3xl"
+                className="mb-8 drop-shadow w-11/12 border border-terciary bg-terciary hover:bg-primary text-darkBlue font-semibold block text-center m-auto py-3 shadow-lg rounded-3xl"
               >
                 {/* <img className="" src={martillo} alt="drought graph"/> */}
                 Curiosidades sobre el agua
@@ -108,11 +113,11 @@ export const HomePage = () => {
           )}
           <div className="border-t border-secondary w-11/12 block m-auto"></div>
 
-          <div className="mt-3 mx-3 mb-2 flex justify-between">
+          <div className="mt-3 mx-4 mb-2 flex justify-between">
             <p className="text-xs font-bold text-darkBlue">
               Reservas de agua en España
             </p>
-            <Link to="/viewmap" className="text-xs text-darkBlue font-semibold">
+            <Link to="/viewmap" className="text-xs text-darkBlue font-medium">
               Ver mapa
             </Link>
           </div>
@@ -130,7 +135,7 @@ export const HomePage = () => {
           </Link>
         </section>
       </div>
-      <div ref={info}>
+      <div className="info pb-6" ref={info}>
         {infoTopic == "droughtVisited" && <LegislationInfo />}
       </div>
     </>

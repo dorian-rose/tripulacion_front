@@ -1,12 +1,12 @@
 export const consultation = async (url, method, body = {}) => {
-
+  console.log("here")
   let options = {};
   const data = { ...body };
 
   try {
 
-    if (method === 'POST' || method === 'PUT' ) {
-      
+    if (method === 'POST' || method === 'PUT') {
+
       options = {
         method,
         body: JSON.stringify(data),
@@ -14,12 +14,12 @@ export const consultation = async (url, method, body = {}) => {
           'Content-type': 'application/json',
         },
       };
-    } 
-    
+    }
+
     if (method === 'DELETE') {
       options = { method };
     }
-   
+
     const request = await fetch(url, options);
 
     if (request) {
