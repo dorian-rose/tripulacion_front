@@ -130,6 +130,14 @@ export const HomePage = () => {
           <div className="border-t border-secondary w-11/12 block m-auto"></div>
 
           <div className="mt-3 mx-3 mb-2 flex justify-between">
+            <p className="text-xs font-bold text-darkBlue">Modelo predictivo</p>
+            <Link to="/viewmap" className="text-xs text-darkBlue font-semibold">
+              Ver modelo
+            </Link>
+          </div>
+          <div className="relative bg-white h-64  w-full text-center border"></div>
+          <div className="mt-4 border-t border-secondary w-11/12 block m-auto"></div>
+          <div className="mt-3 mx-3 mb-2 flex justify-between">
             <p className="text-xs font-bold text-darkBlue">
               Reservas de agua en España
             </p>
@@ -137,7 +145,6 @@ export const HomePage = () => {
               Ver mapa
             </Link>
           </div>
-
           <div className="relative bg-white h-64  w-full text-center border">
             <div className="absolute top-0 bottom-0 left-0 right-0 z-0">
               <MapContainerComp />

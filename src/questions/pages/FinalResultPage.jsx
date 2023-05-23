@@ -6,7 +6,8 @@ import { FinalFeedback } from "../components/FinalFeedback";
 export const FinalResultPage = () => {
   return (
     <div className="pt-16 bg-backgroundPrimary min-h-screen ">
-      <article className="border border-white drop-shadow w-10/12 bg-primary/90 text-white block m-auto  pt-6  px-4 h-96 shadow-lg rounded-lg">
+      <article className="border border-white drop-shadow w-10/12 bg-primary/90 text-white block m-auto pb-24  px-4 md:px-20 h-vh60  shadow-lg rounded-lg">
+        {/* pb-25vh md:pb-96 pt-5vh md:pt-32 min-h-fit */}
         <FinalFeedback />
       </article>
       <img

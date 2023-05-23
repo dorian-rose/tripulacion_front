@@ -20,15 +20,15 @@ export const consultation = async (url, method, body = {}) => {
       options = { method };
     }
     console.log("at request")
-    //const request = await fetch(url, options);
+    const request = await fetch(url, options);
 
-    // if (request) {
-    //   console.log("passed")
-    //   return request.json();
+    if (request) {
+      console.log("passed")
+      return request.json();
 
-    // } else {
-    //   throw new Error('Error al conectar con la api');
-    // }
+    } else {
+      throw new Error('Error al conectar con la api');
+    }
 
   } catch (error) {
     throw new Error(`Error al conectar con la API: ${error.message}`);

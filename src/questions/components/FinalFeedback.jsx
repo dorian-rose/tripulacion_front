@@ -13,7 +13,7 @@ export const FinalFeedback = () => {
   //collect score
   const { scoreObject } = useSelector((state) => state.score);
   //collect current visited pages state
-  const { visitedObject } = useSelector((state) => state.visited);
+  //const { visitedObject } = useSelector((state) => state.visited);
 
   // useEffect(() => {
   //   setUserAnswers({ ...answersObject });
@@ -37,8 +37,15 @@ export const FinalFeedback = () => {
   }, []);
 
   return (
-    <>
-      <p>{`final result: Acertaste ${counter} preguntas! tienes un nivel de conocimient de ${scoreObject.finalScore}%`}</p>
-    </>
+    <div className="relative top-1/2 -translate-y-1/2">
+      <h1 className="mb-9 font-semibold text-center text-7xl">{`${scoreObject.finalScore}%`}</h1>
+      <p className="text-center mx-3">
+        Este es tu nivel de conocimiento sobre políticas azules, buenos usos del
+        agua y su importancia.
+      </p>
+      <p className="mx-3 my-4 text-center font-bold">
+        Muchas gracias por participar.
+      </p>
+    </div>
   );
 };

@@ -14,3 +14,22 @@
 .bottom-4vh {
   bottom: 4vh;
 }
+/* 
+.pt-5vh {
+  padding-top: 5vh;
+}
+.pb-25vh {
+  padding-bottom: 23vh;
+} */
+
+.h-vh60 {
+  height: 60vh;
+}
+
+.h-vh70 {
+  height: 70vh;
+}
+
+.h-vh80 {
+  height: 80vh;
+}

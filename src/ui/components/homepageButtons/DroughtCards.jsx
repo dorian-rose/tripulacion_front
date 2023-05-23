@@ -19,7 +19,7 @@ export const DroughtCards = ({ handleClick }) => {
       <button
         id="politicsVisited"
         onClick={handleClick}
-        className="mb-8 drop-shadow w-11/12 border border-terciary bg-terciary hover:bg-primary text-darkBlue font-bold block text-center m-auto shadow-lg rounded-2xl"
+        className="mb-4 drop-shadow w-11/12 border border-terciary bg-terciary hover:bg-primary text-darkBlue font-bold block text-center m-auto shadow-lg rounded-2xl"
       >
         <img
           className="w-full rounded-t-2xl"

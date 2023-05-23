@@ -1,12 +1,26 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setVisited } from "../../store/slice/visited/visitedSlice";
 
 export const AddUserForm = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  //collect current visited pages state
+  const { visitedObject } = useSelector((state) => state.visited);
 
   //manage logout
   const logout = () => {
+    const visitedPages = {
+      ...visitedObject,
+      droughtVisited: false,
+      contaminationVisited: false,
+      politicsVisited: false,
+      score: 0,
+    };
+    dispatch(setVisited(visitedPages));
+
     // localStorage.removeItem("answers");
     // localStorage.removeItem("visited");
     // localStorage.removeItem("uid");
