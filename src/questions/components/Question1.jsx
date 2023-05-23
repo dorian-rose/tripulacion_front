@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLocal } from "../../helpers/localStorage";
 
 export const Question1 = ({ questionNumber }) => {
+  const user = localStorage.getItem("id");
+  console.log(user);
   const navigate = useNavigate();
   const correctAnswer = "option2";
   const [selectedOption, setSelectedOption] = useState("");

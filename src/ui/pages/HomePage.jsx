@@ -15,6 +15,8 @@ import { ContaminationCards } from "../components/homepageButtons/ContaminationC
 import { ContaminationInfo } from "../components/homepageCards/ContaminationInfo";
 
 export const HomePage = () => {
+  const user = localStorage.getItem("id");
+  console.log(user);
   //collect current visited pages state
   const { visitedObject } = useSelector((state) => state.visited);
 
