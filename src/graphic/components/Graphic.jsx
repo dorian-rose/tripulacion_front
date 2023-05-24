@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { Chart } from 'chart.js/auto';
-import 'chartjs-plugin-zoom';
+import React, { useEffect, useRef } from "react";
+import { Chart } from "chart.js/auto";
+import "chartjs-plugin-zoom";
 
 export const Graphic = () => {
   const chartRef = useRef(null);
@@ -8,16 +8,16 @@ export const Graphic = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('../../../graphic.json');
+        const response = await fetch("../../../graphic.json");
         const jsonData = await response.json();
-        console.log('Datos cargados:', jsonData);
-        console.log('Datos cargados:', response);
+        // console.log('Datos cargados:', jsonData);
+        // console.log('Datos cargados:', response);
         // Realiza las operaciones necesarias con los datos cargados
 
         if (chartRef.current) {
-          const ctx = chartRef.current.getContext('2d');
+          const ctx = chartRef.current.getContext("2d");
           const fechas = Object.values(jsonData.Fecha);
-          const aguaEmbalsada = Object.values(jsonData['Agua embalsada']);
+          const aguaEmbalsada = Object.values(jsonData["Agua embalsada"]);
           const status = Object.values(jsonData.Status);
 
           // Obtener solo los últimos 200 datos
@@ -28,7 +28,7 @@ export const Graphic = () => {
           const realData = [];
           const predData = [];
           for (let i = 0; i < statusRecortado.length; i++) {
-            if (statusRecortado[i] === 'Real') {
+            if (statusRecortado[i] === "Real") {
               realData.push(aguaEmbalsadaRecortada[i]);
               predData.push(null);
             } else {
@@ -44,24 +44,24 @@ export const Graphic = () => {
 
           // Crear una nueva instancia de Chart
           chartRef.current.chart = new Chart(ctx, {
-            type: 'line',
+            type: "line",
             data: {
               labels: fechasRecortadas,
               datasets: [
                 {
-                  label: 'Agua embalsada (Real)',
+                  label: "Agua embalsada (Real)",
                   data: realData,
-                  backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                  borderColor: 'red',
+                  backgroundColor: "rgba(255, 0, 0, 0.5)",
+                  borderColor: "red",
                   borderWidth: 1,
                   pointRadius: 0,
                   fill: false,
                 },
                 {
-                  label: 'Agua embalsada (Predicción)',
+                  label: "Agua embalsada (Predicción)",
                   data: predData,
-                  backgroundColor: 'rgba(0, 0, 255, 0.5)',
-                  borderColor: 'blue',
+                  backgroundColor: "rgba(0, 0, 255, 0.5)",
+                  borderColor: "blue",
                   borderWidth: 1,
                   pointRadius: 0,
                   fill: false,
@@ -73,13 +73,13 @@ export const Graphic = () => {
                 zoom: {
                   zoom: {
                     enabled: true,
-                    mode: 'x',
+                    mode: "x",
                     speed: 0.1,
                     sensitivity: 0.1,
                   },
                   pan: {
                     enabled: true,
-                    mode: 'x',
+                    mode: "x",
                     speed: 0.1,
                     threshold: 10,
                   },
@@ -90,14 +90,14 @@ export const Graphic = () => {
                   display: true,
                   title: {
                     display: true,
-                    text: 'Fechas',
+                    text: "Fechas",
                   },
                 },
                 y: {
                   display: true,
                   title: {
                     display: true,
-                    text: 'Agua embalsada',
+                    text: "Agua embalsada",
                   },
                 },
               },
@@ -105,7 +105,7 @@ export const Graphic = () => {
           });
         }
       } catch (error) {
-        console.error('Error al cargar los datos:', error);
+        console.error("Error al cargar los datos:", error);
       }
     };
 

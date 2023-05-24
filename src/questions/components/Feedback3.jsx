@@ -15,7 +15,7 @@ export const Feedback3 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         La titularidad del agua en España corresponde al Estado, pero su gestión
         se lleva a cabo a través de las administraciones regionales y locales de

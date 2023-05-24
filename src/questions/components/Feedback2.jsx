@@ -15,8 +15,7 @@ export const Feedback2 = () => {
 
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
-      <p className="text-center mx-4 ">
+      <p className="text-center mx-1 ">
         En España, el Ministerio para la Transición Ecológica es responsable de
         varias tareas relacionadas con la gestión de recursos hídricos,
         incluyendo la elaboración del Plan Hidrológico Nacional, la coordinación

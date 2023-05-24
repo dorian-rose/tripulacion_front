@@ -62,11 +62,9 @@ export const HomePage = () => {
 
   //on change of infoTopic
   useEffect(() => {
-    console.log(infoTopic);
     // set state that topic has been visited
     if (infoTopic != "") {
       if (visitedObject[infoTopic] === false && visitedObject.score < 10) {
-        console.log("here");
         const newScore = visitedObject.score + 2;
         const visitedPages = {
           ...visitedObject,

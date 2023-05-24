@@ -15,7 +15,7 @@ export const Feedback8 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         Según nuestro modelo de predicción basado en series temporales, si se
         mantienen las condiciones actuales climáticas y de gestión y explotación

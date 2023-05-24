@@ -15,7 +15,7 @@ export const Feedback7 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         Existe un gran desequilibrio entre regiones, liderando la reutilización
         de aguas Murcia (57.8%) y Comunidad Valenciana (40.6%). En el otro lado

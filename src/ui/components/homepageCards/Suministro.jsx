@@ -62,9 +62,14 @@ export const Suministro = () => {
               handleClick={handleClick}
             />
           )}
-          <button className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl">
+          <a
+            href="https://www.miteco.gob.es/es/agua/temas/planificacion-hidrologica/marco-del-agua/recuperacion_costes.aspx"
+            className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             +info
-          </button>
+          </a>
         </div>
       </article>
     </section>

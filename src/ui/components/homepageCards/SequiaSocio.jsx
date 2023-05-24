@@ -1,5 +1,6 @@
 import sequiaSocio from "../../../assets/homePageButtons/sequiaSocio.svg";
 import vector from "../../../assets/vector.png";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import { ShareButtons } from "../ShareButtons";
@@ -58,9 +59,14 @@ export const SequiaSocio = () => {
               handleClick={handleClick}
             />
           )}
-          <button className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl">
+          <a
+            href="https://www.miteco.gob.es/es/agua/temas/observatorio-nacional-de-la-sequia/que-es-la-sequia/default_old.aspx"
+            className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             +info
-          </button>
+          </a>
         </div>
       </article>
     </section>

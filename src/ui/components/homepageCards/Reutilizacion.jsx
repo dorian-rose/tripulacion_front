@@ -60,9 +60,14 @@ export const Reutilizacion = () => {
               handleClick={handleClick}
             />
           )}
-          <button className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl">
+          <a
+            href="https://www.miteco.gob.es/es/agua/temas/saneamiento-depuracion/"
+            className="mb-8 px-5 py-2 drop-shadow w-content border border-terciary bg-secondary hover:bg-primary text-white text-center  shadow-lg rounded-3xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             +info
-          </button>
+          </a>
         </div>
       </article>
     </section>

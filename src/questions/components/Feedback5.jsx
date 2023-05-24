@@ -15,7 +15,7 @@ export const Feedback5 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         Andalucía se destaca como la comunidad autónoma en España que presenta
         los índices más reducidos de almacenamiento de agua en sus embalses. Su

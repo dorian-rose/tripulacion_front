@@ -15,7 +15,7 @@ export const Feedback4 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         En España se establece una media de consumo en las dos últimas décadas
         de 39.3 litros por persona y día, siendo Cantabria con 45.7 la comunidad

@@ -2,7 +2,7 @@ export const consultation = async (url, method, body = {}) => {
 
   let options = {};
   const data = { ...body };
-  console.log(data)
+
   try {
 
     if (method === 'POST' || method === 'PUT') {
@@ -23,7 +23,7 @@ export const consultation = async (url, method, body = {}) => {
     const request = await fetch(url, options);
 
     if (request) {
-      console.log("passed")
+
       return request.json();
 
     } else {

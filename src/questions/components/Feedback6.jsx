@@ -15,7 +15,7 @@ export const Feedback6 = () => {
   }, []);
   return (
     <div className="relative top-1/2 -translate-y-1/2">
-      <p className="text center font-semibold mb-4">{resultPhrase}</p>
+      <p className="text-center font-semibold mb-4">{resultPhrase}</p>
       <p className="text-center mx-4 ">
         La Cuenca del Ebro registra el mayor número de embalses: 73. En segundo
         lugar, la Cuenca del Tajo con 51 embalses.
