@@ -12,8 +12,8 @@ import { setVisitedLocal } from "../../helpers/localStorage";
 import { DroughtCards } from "../components/homepageButtons/DroughtCards";
 import { DroughtLegislation } from "../components/homepageCards/DroughtLegislation";
 
-import { ContaminationCards } from "../components/homepageButtons/ContaminationCards";
-import { ContaminationInfo } from "../components/homepageCards/ContaminationInfo";
+//import { ContaminationCards } from "../components/homepageButtons/ContaminationCards";
+//import { ContaminationInfo } from "../components/homepageCards/ContaminationInfo";
 import { Graphic } from "../../graphic/components/Graphic";
 
 import { PolicyCards } from "../components/homepageButtons/PolicyCards";
