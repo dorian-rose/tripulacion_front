@@ -31,15 +31,15 @@ export const SignupForm = () => {
   const { singUp } = useSignup(); // Obtener la función 'singUp' del hook 'useSignup'
 
   const onSubmit = async (data) => {
-    try {
-      data.ccaa = ccaa; // Agrega la ccaa al objeto data
-      await singUp(data.email, data.password, data.ccaa, provider); // Llamar a la función 'singUp' con los datos necesarios
-      console.log("User created successfully");
-      // Lógica adicional después de crear el usuario, como redireccionar a otra página
-    } catch (error) {
-      console.log("Error creating user", error);
-      // Manejar el error de creación de usuario, mostrar un mensaje de error, etc.
+    
+    const body = {
+      email: data.email,
+      password: data.password,
+      ccaa: data.ccaa
     }
+
+    await singUp(body, 'register'); 
+   
   };
 
   return (

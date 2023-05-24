@@ -1,53 +1,46 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { consultation } from "../api/fetch";
+import { setUser } from "../store/slice/user/userSlice";
+import { setUserLocal } from "../helpers/localStorage";
+import { useDispatch } from "react-redux";
 
 export const useSignup = () => {
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
-  const singUp = async (email, password, ccaa, provider) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const singUp = async (body, provider) => {
+
     setLoading(true);
 
+    let url = "https://h2ohback.onrender.com/api/v1/auth";
+    if (provider) {
+      url += `/${provider}`;
+    
+    } else {
+      url += "/login";
+
+    }
     try {
-      let url = "https://h2ohback.onrender.com/api/v1/auth";
-      if (provider) {
-        url += `/${provider}`;
-        console.log(url);
-      } else {
-        url += "/register";
-        console.log(url);
-      }
 
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password, ccaa }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error al iniciar sesión");
-      }
-
-      const data = await response.json();
-      console.log('esto es data:', data);
-
-      // Guardar email y uid en localStorage
-      localStorage.setItem("id", data.user._id);
-      localStorage.setItem("email", data.user.email);
-      localStorage.setItem("date", data.user.date);
-      localStorage.setItem("__v", data.user.__v);
-
-      // Redireccionar a /welcome utilizando useNavigate
-      navigate("/welcome");
-
-      setLoading(false);
+      const request = await consultation(url, 'POST', body)
+      console.log(request)
+      const user = request.user
+      setUserLocal(user._id)
+      dispatch(setUser(user._id))
+      navigate('/welcome')
+    
     } catch (error) {
       setError(error.message);
       setLoading(false);
     }
+
+    setLoading(false);
+   
   };
 
   return { loading, error, singUp };

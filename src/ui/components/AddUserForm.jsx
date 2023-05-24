@@ -69,7 +69,9 @@ export const AddUserForm = () => {
         const url = `https://h2ohback.onrender.com/api/v1/auth/${userId}`;
         const request = await consultation(url);
         const user = request.user;
-        setUser(user);
+
+        setUserP(user)
+       
       }
     } catch (error) {
       console.error(error);

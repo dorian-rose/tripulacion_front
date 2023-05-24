@@ -6,10 +6,13 @@ import newlogo from "../../assets/newlogo.png";
 export const LoginForm = () => {
   const { loading, error, login } = useLogin();
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    const { email, password } = event.target.elements;
-    await login(email.value, password.value);
+  const handleLogin = async (ev) => {
+    ev.preventDefault();
+    const body = {
+      email: ev.target.email.value,
+      password: ev.target.password.value
+    }
+    await login(body);
   };
 
   const handleProviderLogin = async (provider) => {
@@ -47,9 +50,9 @@ export const LoginForm = () => {
 
         <p className="mt-8">
           ¿Olvidaste la contraseña?
-          
+
         </p>
-        
+
         <p className="mt-2 mb-4">
           ¿No tienes una cuenta?
           <Link to="/signup" className="text-black-500 hover:text-black-600">
@@ -66,7 +69,7 @@ export const LoginForm = () => {
       </form>
 
       <div className="flex flex-col items-center justify-center my-2">
-     
+
         <p className="mb-4">O entra con</p>
         <div className="flex mt-2 space-x-4 mt-4">
           <button

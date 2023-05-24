@@ -45,3 +45,8 @@ export const getScoreLocal = () => {
 export const setScoreLocal = (data) => {
     return localStorage.setItem("score", JSON.stringify(data));
 }
+
+export const setUserLocal = (id, ) => {
+    localStorage.setItem("id", JSON.stringify(id));
+
+}

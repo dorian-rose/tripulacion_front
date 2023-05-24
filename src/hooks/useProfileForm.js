@@ -14,10 +14,10 @@ export const useProfileForm = (id) => {
             userlastname: e.target.surname.value,
             ccaa: e.target.ccaa.value,
             city: e.target.city.value
-
         };
-        console.log(updatedUser)
+   
         try {
+
             const url = `https://h2ohback.onrender.com/api/v1/auth/${id}`;
             const method = "PUT";
             const response = await consultation(url, method, updatedUser);
@@ -25,8 +25,8 @@ export const useProfileForm = (id) => {
             if (!response.ok) {
                 throw new Error("Error al actualizar el usuario");
             }
-
             navigate('/')
+
         } catch (error) {
             console.error("Error al actualizar el usuario:", error);
         }
