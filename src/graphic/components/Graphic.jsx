@@ -10,8 +10,6 @@ export const Graphic = () => {
       try {
         const response = await fetch('../../../graphic.json');
         const jsonData = await response.json();
-        console.log('Datos cargados:', jsonData);
-        console.log('Datos cargados:', response);
         // Realiza las operaciones necesarias con los datos cargados
 
         if (chartRef.current) {

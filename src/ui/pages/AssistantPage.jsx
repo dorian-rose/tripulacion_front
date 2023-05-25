@@ -42,7 +42,7 @@ export const AssistantPage = () => {
 
       <Link
         to="/"
-        className="fixed left-1/2 -translate-x-1/2 bottom-2 drop-shadow w-11/12 bg-primary text-white hover:bg-secondary  block  mb-10 text-center m-auto py-3 shadow-lg rounded-3xl"
+        className="max-w-screen-md fixed left-1/2 -translate-x-1/2 bottom-2 drop-shadow w-11/12 bg-primary text-white hover:bg-secondary  block  mb-10 text-center m-auto py-3 shadow-lg rounded-3xl"
       >
         Siguiente
       </Link>

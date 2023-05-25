@@ -1,18 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { getUserLocal } from '../../../helpers/localStorage'
 
 export const userSlice = createSlice({
 
 
     name: 'user',
     initialState: {
-        userObject: localStorage.getItem("id")
-        // userObject: {
-        //     question1: 0,
-        //     question2: 0,
-        //     question3: 0,
-        //     question4: 0,
-        //     question5: 0,
-        // },
+        userObject: getUserLocal().replaceAll('"', "")
+
     },
     reducers: {
         setUser: (state, action) => {

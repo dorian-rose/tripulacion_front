@@ -21,7 +21,7 @@ export const useProfileForm = (id) => {
             const url = `https://h2ohback.onrender.com/api/v1/auth/${id}`;
             const method = "PUT";
             const response = await consultation(url, method, updatedUser);
-            console.log(response)
+
             if (!response.ok) {
                 throw new Error("Error al actualizar el usuario");
             }

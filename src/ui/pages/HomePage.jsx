@@ -34,6 +34,12 @@ import { Suministro } from "../components/homepageCards/Suministro";
 //--politicas azules
 
 export const HomePage = () => {
+  const { userObject } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    console.log("homepage", userObject);
+  }, []);
+
   //collect current visited pages state
   const { visitedObject } = useSelector((state) => state.visited);
   const dispatch = useDispatch();
@@ -62,11 +68,11 @@ export const HomePage = () => {
 
   //on change of infoTopic
   useEffect(() => {
-    console.log(infoTopic);
+
     // set state that topic has been visited
     if (infoTopic != "") {
       if (visitedObject[infoTopic] === false && visitedObject.score < 10) {
-        console.log("here");
+
         const newScore = visitedObject.score + 2;
         const visitedPages = {
           ...visitedObject,

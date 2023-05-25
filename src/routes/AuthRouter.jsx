@@ -8,7 +8,7 @@ import { TermsPage } from "../terms/pages/TermsPage";
 
 export const AuthRouter = () => {
   const user = localStorage.getItem("id");
-  console.log(user);
+ 
   return (
     <Routes>
       <Route path="/terms" element={<TermsPage />} />

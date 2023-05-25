@@ -29,7 +29,7 @@ export const LoginForm = () => {
         className="p-5 font-sans flex flex-col items-center my-2 w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
         onSubmit={handleLogin}
       >
-        <h3 className="font-poppins font-normal font-medium text-base leading-6 flex flex-col my-2 w-full font-semibold">LOGIN</h3>
+        <h3 className="font-poppins text-base leading-6 flex flex-col my-2 w-full font-semibold">LOGIN</h3>
         <input
           type="email"
           placeholder="Email"
@@ -55,8 +55,8 @@ export const LoginForm = () => {
 
         <p className="mt-2 mb-4">
           ¿No tienes una cuenta?
-          <Link to="/signup" className="text-black-500 hover:text-black-600">
-            crea una
+          <Link to="/signup" className="mx-1 text-black-500 hover:text-black-600">
+            créate una
           </Link>
         </p>
 
@@ -71,7 +71,7 @@ export const LoginForm = () => {
       <div className="flex flex-col items-center justify-center my-2">
 
         <p className="mb-4">O entra con</p>
-        <div className="flex mt-2 space-x-4 mt-4">
+        <div className="flex space-x-4 mt-4">
           <button
             type="button"
             onClick={() => handleProviderLogin("google")}

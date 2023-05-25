@@ -42,12 +42,11 @@ export const FeedbackPage = () => {
     );
 
     //collect user id
-    const user = localStorage.getItem("id");
-
+    const user = localStorage.getItem("id").replaceAll('"', "");
+    console.log(user);
     //check if user already has entry
     const userUrl = `https://h2ohback.onrender.com/api/v1/entries/${user}`;
     const request = await consultation(userUrl);
-    console.log(request);
 
     //define body for fetch
     const body = {
@@ -58,17 +57,17 @@ export const FeedbackPage = () => {
     };
     //if use already exists, make PUT
     if (request.ok) {
-      const url = `${import.meta.env.VITE_RESULT_URL}/${user}`;
-      console.log("in PUT", url);
+      const url = `https://h2ohback.onrender.com/api/v1/entries/${user}`;
       const method = "PUT";
-      //consultation(url, method, body);
+      console.log("del PUT", url, method, body);
+      consultation(url, method, body);
     } else {
       //if user doens´t have entry, make POST
 
-      const url = import.meta.env.VITE_RESULT_URL;
-      console.log("in POST", url, body);
+      const url = "https://h2ohback.onrender.com/api/v1/entries";
       const method = "POST";
-      //consultation(url, method, body);
+      console.log("del POST", url, method, body);
+      consultation(url, method, body);
     }
     navigate("/final");
   };
@@ -76,7 +75,7 @@ export const FeedbackPage = () => {
   return (
     <div className="pt-16 bg-backgroundPrimary min-h-screen ">
       <article
-        className={`border border-white drop-shadow w-10/12 bg-primary/90 text-white block m-auto pb-20   px-4 md:px-20 ${
+        className={`border border-white drop-shadow w-10/12 bg-primary/90 text-white block m-auto pb-28   px-4 md:px-20 ${
           number == 2 ? "h-vh80" : "h-vh70"
         }  min-h-fit shadow-lg rounded-lg`}
       >
